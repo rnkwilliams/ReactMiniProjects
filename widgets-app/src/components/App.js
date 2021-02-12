@@ -1,5 +1,6 @@
 import React from 'react';
-import Search from './Search'
+import Dropdown from './Dropdown';
+// import Search from './Search';
 // import Accordion from './Accordion'
 
 
@@ -18,11 +19,27 @@ const App = () => {
       title: 'How do you use React?',
       content: 'You use React by creating components.'
     }
-  ]
+  ];
+
+  const options = [
+    {
+      label: 'The Color Red',
+      value: 'red'
+    },
+    {
+      label: 'The Color Green',
+      value: 'green'
+    },
+    {
+      label: 'The Color Blue',
+      value: 'blue'
+    }
+  ];
 
     return(
       <div>
-        <Search />
+        <Dropdown options={options}/>
+        {/* <Search /> */}
         {/* <Accordion items={items}/> */}
       </div>
     )
